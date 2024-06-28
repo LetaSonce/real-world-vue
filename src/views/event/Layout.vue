@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted, defineProps, computed } from 'vue'
 import EventService from '@/services/EventService.js'
 
 const props = defineProps({
@@ -7,11 +7,11 @@ const props = defineProps({
     required: true
   }
 })
-const event = ref('')
 const id = computed(() => props.id)
+const event = ref(null)
 
 onMounted(() => {
-  EventService.getEvent(id.event)
+  EventService.getEvent(id.value)
     .then((response) => {
       event.value = response.data
     })
