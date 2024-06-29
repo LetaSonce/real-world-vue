@@ -14,7 +14,8 @@ const GStore = inject('GStore')
       <div class="wrapper">
         <nav>
           <RouterLink :to="{ name: 'EventList' }">Events</RouterLink> |
-          <RouterLink :to="{ name: 'about' }">About</RouterLink>
+          <RouterLink :to="{ name: 'about' }">About</RouterLink> |
+          <RouterLink :to="{ name: 'TodoList' }">Todo List</RouterLink>
         </nav>
       </div>
     </header>

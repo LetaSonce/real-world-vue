@@ -7,6 +7,7 @@ import EventRegister from '@/views/event/Register.vue'
 import AboutView from '@/views/AboutView.vue'
 import NotFound from '@/views/NotFound.vue'
 import NetworkError from '@/views/NetworkError.vue'
+import TodoApp from '@/components/TodoList/TodoApp.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -66,6 +67,11 @@ const router = createRouter({
       path: '/network-error',
       name: 'NetworkError',
       component: NetworkError
+    },
+    {
+      path: '/todoapp',
+      name: 'TodoList',
+      component: TodoApp,
     }
   ]
 })
